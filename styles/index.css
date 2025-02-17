@@ -1,85 +1,251 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color: #ffe4ff;
+    --accent-color-pink: #ff4cb2;
+    --accent-purple: #861388;
+    --accent-dark-purple: #620e63;
+    --accent-grey: rgb(77, 77, 77);
+}
+
 body {
     font-display: swap;
     font-family: Inter, sans-serif;
-    
+    background-color: var(--main-bg-color, silver);
 }
 
-/* Header styles */
 header {
-    background-color: #df0073;
-    color: white;
-    padding: 1rem;
+    background-color: var(--accent-color-pink, fuchsia);
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     text-align: center;
-    margin:0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 0.5rem;
 }
+
 
 nav ul li a {
-    color: white;
+    color: var(--accent-grey, grey);
     text-decoration: none;
+    background: white; 
+    border-radius: 25px;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+    
 }
 
-/* Layout container */
-.main-container {
-    display: flex;
-    padding: 0px ;
-    width: 1250px;
+nav ul li a:hover {
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+    background: var(--main-bg-color, silver); 
 }
 
-/* Sticky Sidebar */
+
+#container {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 #sticky-sidebar {
-    flex-basis: 300px;
+    flex: 35%;
     position: sticky;
-    background: #dbffb7;
-    padding: 20px;
+    padding: 3rem;
+    background-color: #ffffff;
+    
 }
 
 .card {
     position: sticky;
-    top: 30vh;
-    padding: 2rem;
+    top: 30dvh;
+    bottom: 10dvh;
+}
+
+p{
+    line-height: 150%;
+    margin-bottom: 2rem;
+    color: var(--accent-grey, grey);
+    font-size: 0.8em;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/repeating-linear-gradient*/
+
+.notebook-paper {
+    background: repeating-linear-gradient(
+        white 0px, 
+        white 24px, 
+        #b0d0ff 25px
+    );
+    line-height: 25px;
+    padding: 15px 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    padding: 0.5em 0.2em 0.5em 0.2em;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #df0073;
+    background-color: var(--accent-purple, purple);
     color: white;
+    margin-right: -6rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Content */
+h2{
+    font-size: 2rem;
+    color: var(--accent-color-pink, fuchsia);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.button {
+    display: inline-block;
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--accent-purple, purple); 
+    border: none;
+    border-radius: 25px; 
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect with help from ChatGPT */
+.button:hover {
+    background-color: var(--accent-dark-purple, purple); 
+    transform: scale(1.05); 
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.button:active {
+    transform: scale(0.95); 
+}
+
+
 main {
-    flex-grow: 1;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    text-align: center; /* Centers text-based content */
+    flex:65%;
+    padding: 3rem 6rem 3rem 6rem;
+    text-align: center;
 }
 
+main ul {
+    display: inline-block;
+    text-align: left;
+    list-style: square;
+    color: var(--accent-grey, grey);
+    font-weight: lighter;
+}
 
-/* Image styling */
 #about-me img {
-    width: 40%;
+    width: 80%;
     border-radius: 50%;
     margin-bottom: 15px;
 }
 
-/* Footer */
+#skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+#skills-list li {
+    background: var(--accent-purple, purple);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#skills-list li:hover {
+    background: var(--accent-dark-purple, purple);
+    animation: spin 0.5s ease-in;
+}
+
+/* Click animation */
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.skills-list li:active {
+    animation: spin 0.5s ease-in-out;
+}
+
+
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #959595;
+    background-color: var(--accent-color-pink, fuchsia);
     color: white;
     margin-top: auto;
+}
+
+@media (max-width: 932px) {
+    main {
+        padding: 1rem;
+    }
+    .card h1{
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    #sticky-sidebar {
+        text-align: center;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        padding: 1rem;
+    }
+    .card h1{
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #sticky-sidebar {
+        text-align: center;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+    
 }

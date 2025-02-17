@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-display: swap;
+    font-family: Inter, sans-serif;
+    background-color: #ffe4ff;
+}
+
+header {
+    background-color: #ff4cb2;
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+nav ul li a {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+    background: white; /* Default button color */
+    border-radius: 25px;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+nav ul li a:hover {
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+    background: #ffe4ff; /* Darker shade for hover effect */
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+    padding: 0.2rem;
+    text-align: center;
+    color: rgb(77, 77, 77);
+   
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    
+}
+
+aside {
+    flex:30%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    line-height: 200%;
+    color: rgb(77, 77, 77);
+    background-color: white;
+}
+
+aside img {
+    width: 10%;
+}
+
+details {
+    flex:100%;
+    padding: 2rem;
+
+}
+
+
+form.notebook-paper {
+    flex: 70%;
+    background: repeating-linear-gradient(
+        white 0px, 
+        white 24px, 
+        #b0d0ff 25px
+    ); /* Notebook-style background */
+    line-height: 25px;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid #4a90e2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    font-family: Inter, sans-serif;;
+    background: #861388;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    display: block;
+    margin: 15px auto 0;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #630e64;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff4cb2;
+    color: white;
+    margin-top: auto;
+}

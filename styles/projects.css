@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #ffe4ff;
+    --accent-color-pink: #ff4cb2;
+    --accent-purple: #861388;
+    --accent-dark-purple: #620e63;
+    --accent-grey: rgb(77, 77, 77);
+}
+
+body {
+    font-display: swap;
+    font-family: Inter, sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+header {
+    background-color: var(--accent-color-pink);
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+
+nav ul li a {
+    color: var(--accent-grey);
+    text-decoration: none;
+    background: white; /* Default button color */
+    border-radius: 25px;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+nav ul li a:hover {
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+    background: #ffe4ff; /* Darker shade for hover effect */
+}
+
+project-card {
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent-color-pink);
+    color: white;
+    margin-top: auto;
+}
