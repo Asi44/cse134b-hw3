@@ -12,14 +12,24 @@
     <body>
 
         <header>
-            <nav>
+            <nav id ="full-screen-menu">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="projects.html">MY PROJECTS</a></li>
-                    <li><a href="experiments.html">EXPERIMENTS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="index.html">about</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
+
+            <details>
+                <summary id="mobile-menu"><img src="./assets/hamburger (1).png" width="40px"></summary>
+                <nav >
+                    <ul>
+                        <li><a href="index.html">about</a></li>
+                        <li><a href="projects.html">projects</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </details>
             
         </header>
 
@@ -37,7 +47,11 @@
             <main>
                 <article id ="about-me">
                     
-                    <img src = "./assets/profile-pic.jpeg" alt="A picture of me"/>
+                    <picture>
+                        <source srcset="./assets/profile-pic-small.jpg" media="(max-width: 380px)">
+                        <img src="./assets/profile-pic-large.jpg" alt="Aasiyah Shaikh's Profile Picture">
+                    </picture>
+                      
                                         
                     <h2>About Me</h2>
                     <p class="notebook-paper">My name is <b>Aasiyah Shaikh</b> and I am an aspiring software engineer. I am currently majoring in Computer Science at
@@ -65,6 +79,8 @@
         
         <footer>
             <address>This site was created by Aasiyah Shaikh. &copy; 2025</address>
+            <br>
+            <p>Credits: <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by Laura Reen - Flaticon</a></p>
         </footer>
 
     </body>
